@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:jobhunt/models/candidate.dart';
 import 'package:jobhunt/models/post.dart';
 import 'package:jobhunt/screens/candidates_screen.dart';
-import 'package:jobhunt/screens/ create_post_screen.dart';
+import 'package:jobhunt/screens/create_post_screen.dart';
 import 'package:jobhunt/screens/job_listings_screen.dart';
 
 
