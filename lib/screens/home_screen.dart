@@ -9,16 +9,16 @@ import 'package:jobhunt/screens/job_listings_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   final List<Post> posts = [
-    Post(author: 'John Doe', content: 'Excited to join this platform!', timestamp: DateTime.now(), imageUrl: 'assets/images/c4.jpeg'),
-    Post(author: 'Durgesh', content: 'I am Eager to join a Startup company.', timestamp: DateTime.now(), imageUrl: 'assets/images/c10.jpeg'),
-    Post(author: 'Michael Johnson', content: 'Happy Morning, Enjoying Present!', timestamp: DateTime.now(), imageUrl: 'assets/images/c1.jpeg'),
-    Post(author: 'Emily Smith', content: 'Excited to join this platform!', timestamp: DateTime.now(), imageUrl: 'assets/images/c2.jpeg'),
-    Post(author: 'Sophia Brown', content: 'Excited to join this platform!', timestamp: DateTime.now(), imageUrl: 'assets/images/c3.jpeg'),
-    Post(author: 'David Wilson', content: 'Excited to join this platform!', timestamp: DateTime.now(), imageUrl: 'assets/images/c5.jpeg'),
-    Post(author: 'Jessica Lee', content: 'Excited to join this platform!', timestamp: DateTime.now(), imageUrl: 'assets/images/c6.jpeg'),
-    Post(author: 'Ryan Miller', content: 'Excited to join this platform!', timestamp: DateTime.now(), imageUrl: 'assets/images/c7.jpeg'),
-    Post(author: 'Amanda Taylor', content: 'Excited to join this platform!', timestamp: DateTime.now(), imageUrl: 'assets/images/c8.jpeg'),
-    Post(author: 'William Martinez', content: 'Excited to join this platform!', timestamp: DateTime.now(), imageUrl: 'assets/images/c9.jpeg'),
+    Post(author: 'John Doe', content: '"Excited to join this platform!"', timestamp: DateTime.now(), imageUrl: 'assets/images/c4.jpeg'),
+    Post(author: 'Durgesh', content: '"I am Eager to join a Startup company."', timestamp: DateTime.now(), imageUrl: 'assets/images/c10.jpeg'),
+    Post(author: 'Michael Johnson', content: '"Happy Morning, Enjoying Present!"', timestamp: DateTime.now(), imageUrl: 'assets/images/c1.jpeg'),
+    Post(author: 'Emily Smith', content: '"Excited to join this platform!"', timestamp: DateTime.now(), imageUrl: 'assets/images/c2.jpeg'),
+    Post(author: 'Sophia Brown', content: '"Excited to join this platform!"', timestamp: DateTime.now(), imageUrl: 'assets/images/c3.jpeg'),
+    Post(author: 'David Wilson', content: '"Excited to join this platform!"', timestamp: DateTime.now(), imageUrl: 'assets/images/c5.jpeg'),
+    Post(author: 'Jessica Lee', content: '"Excited to join this platform!"', timestamp: DateTime.now(), imageUrl: 'assets/images/c6.jpeg'),
+    Post(author: 'Ryan Miller', content: '"Excited to join this platform!"', timestamp: DateTime.now(), imageUrl: 'assets/images/c7.jpeg'),
+    Post(author: 'Amanda Taylor', content: '"Excited to join this platform!"', timestamp: DateTime.now(), imageUrl: 'assets/images/c8.jpeg'),
+    Post(author: 'William Martinez', content: '"Excited to join this platform!"', timestamp: DateTime.now(), imageUrl: 'assets/images/c9.jpeg'),
 
 
   ];

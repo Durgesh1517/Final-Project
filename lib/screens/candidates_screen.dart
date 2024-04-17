@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:jobhunt/models/candidate.dart';
 import 'package:jobhunt/screens/candidate_detail_screen.dart';
 
+
+
 class CandidatesScreen extends StatefulWidget {
   @override
   _CandidatesScreenState createState() => _CandidatesScreenState();
@@ -13,43 +15,43 @@ class _CandidatesScreenState extends State<CandidatesScreen> {
       name: "John Doe",
       jobTitle: "Software Engineer",
       imageUrl: 'assets/images/c4.jpeg',
-      description: "Experienced software engineer with expertise in developing scalable applications.",
+      description: "Experienced software engineer with expertise in developing scalable applications.Done more than 100 projects for the company and serving the company with full hardwork and dedication",
     ),
     Candidate(
       name: "Durgesh",
       jobTitle: "Web Developer",
       imageUrl: 'assets/images/c10.jpeg',
-      description: "Creative web developer with a passion for building interactive and user-friendly websites.",
+      description: "Creative web developer with a passion for building interactive and user-friendly websites.Done more than 100 projects for the company and serving the company with full hardwork and dedication",
     ),
     Candidate(
       name: "Michael Johnson",
       jobTitle: "Data Scientist",
       imageUrl: 'assets/images/c1.jpeg',
-      description: "Data scientist specialized in analyzing large datasets and deriving actionable insights.",
+      description: "Data scientist specialized in analyzing large datasets and deriving actionable insights.Done more than 100 projects for the company and serving the company with full hardwork and dedication",
     ),
     Candidate(
       name: "Emily Smith",
       jobTitle: "Graphic Designer",
       imageUrl: 'assets/images/c2.jpeg',
-      description: "Talented graphic designer with a keen eye for detail and a passion for visual storytelling.",
+      description: "Talented graphic designer with a keen eye for detail and a passion for visual storytelling.Done more than 100 projects for the company and serving the company with full hardwork and dedication",
     ),
     Candidate(
       name: "Sophia Brown",
       jobTitle: "Marketing Manager",
       imageUrl: 'assets/images/c3.jpeg',
-      description: "Marketing professional with extensive experience in developing and executing successful marketing campaigns.",
+      description: "Marketing professional with extensive experience in developing and executing successful marketing campaigns.Done more than 100 projects for the company and serving the company with full hardwork and dedication",
     ),
     Candidate(
       name: "David Wilson",
       jobTitle: "Product Manager",
       imageUrl: 'assets/images/c5.jpeg',
-      description: "Product manager with a track record of delivering innovative products that meet user needs.",
+      description: "Product manager with a track record of delivering innovative products that meet user needs.Done more than 100 projects for the company and serving the company with full hardwork and dedication",
     ),
     Candidate(
       name: "Jessica Lee",
       jobTitle: "UI/UX Designer",
       imageUrl: 'assets/images/c6.jpeg',
-      description: "UI/UX designer passionate about creating intuitive and visually appealing user interfaces.",
+      description: "UI/UX designer passionate about creating intuitive and visually appealing user interfaces.Done more than 100 projects for the company and serving the company with full hardwork and dedication",
     ),
     Candidate(
       name: "Ryan Miller",
@@ -61,13 +63,13 @@ class _CandidatesScreenState extends State<CandidatesScreen> {
       name: "Amanda Taylor",
       jobTitle: "HR Manager",
       imageUrl: 'assets/images/c8.jpeg',
-      description: "Human resources professional with a focus on recruiting, employee relations, and organizational development.",
+      description: "Human resources professional with a focus on recruiting, employee relations, and organizational development.Done more than 100 projects for the company and serving the company with full hardwork and dedication",
     ),
     Candidate(
       name: "William Martinez",
       jobTitle: "Sales Representative",
       imageUrl: 'assets/images/c9.jpeg',
-      description: "Results-driven sales representative with a proven track record of exceeding sales targets.",
+      description: "Results-driven sales representative with a proven track record of exceeding sales targets.Done more than 100 projects for the company and serving the company with full hardwork and dedication",
     ),
   ];
 
