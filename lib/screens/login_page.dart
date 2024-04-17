@@ -1,0 +1,120 @@
+import 'package:flutter/material.dart';
+import 'package:jobhunt/screens/home_screen.dart'; // Import your home screen here
+import 'package:jobhunt/screens/register_page.dart';
+
+class LoginPage extends StatelessWidget {
+  final TextEditingController _usernameController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+
+  // Define custom username and password
+  final String _customUsername = 'final@gmail.com';
+  final String _customPassword = 'final123';
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Login'),
+        backgroundColor: Colors.blue, // Customize app bar color
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Welcome back!',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 20),
+              TextField(
+                controller: _usernameController,
+                decoration: InputDecoration(
+                  labelText: 'Username',
+                  prefixIcon: Icon(Icons.person),
+                  border: OutlineInputBorder(),
+                ),
+              ),
+              SizedBox(height: 10),
+              TextField(
+                controller: _passwordController,
+                decoration: InputDecoration(
+                  labelText: 'Password',
+                  prefixIcon: Icon(Icons.lock),
+                  border: OutlineInputBorder(),
+                ),
+                obscureText: true,
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+
+                  String enteredUsername = _usernameController.text.trim();
+                  String enteredPassword = _passwordController.text.trim();
+
+
+                  if (enteredUsername == _customUsername &&
+                      enteredPassword == _customPassword) {
+                    // Navigate to home screen if login is successful
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => HomeScreen()),
+                    );
+                  } else {
+                    // Show error message if login fails
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: Text('Login Failed'),
+                          content: Text('Invalid username or password. Please try again.'),
+                          actions: [
+                            TextButton(
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              },
+                              child: Text('OK'),
+                            ),
+                          ],
+                        );
+                      },
+                    );
+                  }
+                },
+                style: ElevatedButton.styleFrom(
+                  padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                  backgroundColor: Colors.blue,
+                ),
+                child: Text(
+                  'Login',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              SizedBox(height: 10),
+              TextButton(
+                onPressed: () {
+                  // Navigate to registration page
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => RegistrationPage()),
+                  );
+                },
+                child: Text(
+                  'Don\'t have an account? Register here',
+                  style: TextStyle(color: Colors.blue),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
