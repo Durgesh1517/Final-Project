@@ -82,7 +82,8 @@ class CandidateDetailScreen extends StatelessWidget {
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.blue,
-                            textStyle: TextStyle(fontSize: 18),
+                            textStyle:  TextStyle(fontSize: 18),
+
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),
                             ),

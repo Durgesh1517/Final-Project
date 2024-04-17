@@ -74,6 +74,7 @@ flutter:
      - assets/images/microsoft.png
      - assets/images/tesla.png
      - assets/images/amazon.png
+     - assets/images/logo.jpg
 
 
   # To add assets to your application, add an assets section, like this:

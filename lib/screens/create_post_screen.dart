@@ -14,6 +14,8 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
   TextEditingController _titleController = TextEditingController();
   TextEditingController _companyController = TextEditingController();
 
+  List<Post> posts = []; // List to store created posts
+
   @override
   void dispose() {
     _contentController.dispose();
@@ -93,18 +95,22 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
 
                 // Create the post based on post type
                 if (_postType == 'Regular Post') {
+                  // Create regular post
                   Post newPost = Post(
                     author: 'Durgesh',
                     content: content,
                     timestamp: DateTime.now(),
                     imageUrl: '',
                   );
-                  // TODO: Handle regular post creation logic
+
+                  // Add the new post to the beginning of the list
+                  setState(() {
+                    posts.insert(0, newPost);
+                  });
                 } else {
                   // Create job listing post
                   // TODO: Handle job listing creation logic
                 }
-
 
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
@@ -127,6 +133,25 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
               child: Text(
                 'Create Post',
                 style: TextStyle(fontSize: 18.0),
+              ),
+            ),
+            SizedBox(height: 24),
+            Expanded(
+              child: ListView.builder(
+                itemCount: posts.length,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 8.0),
+                    child: Card(
+                      elevation: 4.0,
+                      child: ListTile(
+                        title: Text(posts[index].content),
+                        subtitle: Text('Posted by ${posts[index].author}'),
+                        // You can customize how you display the post details here
+                      ),
+                    ),
+                  );
+                },
               ),
             ),
           ],

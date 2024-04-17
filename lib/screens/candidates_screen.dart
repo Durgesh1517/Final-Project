@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:jobhunt/models/candidate.dart';
 import 'package:jobhunt/screens/candidate_detail_screen.dart';
 
-
-
 class CandidatesScreen extends StatefulWidget {
   @override
   _CandidatesScreenState createState() => _CandidatesScreenState();
