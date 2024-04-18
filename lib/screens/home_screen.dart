@@ -9,16 +9,46 @@ import 'package:jobhunt/screens/job_listings_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   final List<Post> posts = [
-    Post(author: 'John Doe', content: '"Excited to join this platform!"', timestamp: DateTime.now(), imageUrl: 'assets/images/c4.jpeg'),
-    Post(author: 'Durgesh', content: '"I am Eager to join a Startup company."', timestamp: DateTime.now(), imageUrl: 'assets/images/c10.jpeg'),
-    Post(author: 'Michael Johnson', content: '"Happy Morning, Enjoying Present!"', timestamp: DateTime.now(), imageUrl: 'assets/images/c1.jpeg'),
-    Post(author: 'Emily Smith', content: '"Excited to join this platform!"', timestamp: DateTime.now(), imageUrl: 'assets/images/c2.jpeg'),
-    Post(author: 'Sophia Brown', content: '"Excited to join this platform!"', timestamp: DateTime.now(), imageUrl: 'assets/images/c3.jpeg'),
-    Post(author: 'David Wilson', content: '"Excited to join this platform!"', timestamp: DateTime.now(), imageUrl: 'assets/images/c5.jpeg'),
-    Post(author: 'Jessica Lee', content: '"Excited to join this platform!"', timestamp: DateTime.now(), imageUrl: 'assets/images/c6.jpeg'),
-    Post(author: 'Ryan Miller', content: '"Excited to join this platform!"', timestamp: DateTime.now(), imageUrl: 'assets/images/c7.jpeg'),
-    Post(author: 'Amanda Taylor', content: '"Excited to join this platform!"', timestamp: DateTime.now(), imageUrl: 'assets/images/c8.jpeg'),
-    Post(author: 'William Martinez', content: '"Excited to join this platform!"', timestamp: DateTime.now(), imageUrl: 'assets/images/c9.jpeg'),
+    Post(author: 'John Doe',
+        content: '"Excited to join this platform!"',
+        timestamp: DateTime.now(),
+        imageUrl: 'assets/images/c4.jpeg'),
+    Post(author: 'Durgesh',
+        content: '"I am Eager to join a Startup company."',
+        timestamp: DateTime.now(),
+        imageUrl: 'assets/images/c10.jpeg'),
+    Post(author: 'Michael Johnson',
+        content: '"Happy Morning, Enjoying Present!"',
+        timestamp: DateTime.now(),
+        imageUrl: 'assets/images/c1.jpeg'),
+    Post(author: 'Emily Smith',
+        content: '"Excited to join this platform!"',
+        timestamp: DateTime.now(),
+        imageUrl: 'assets/images/c2.jpeg'),
+    Post(author: 'Sophia Brown',
+        content: '"Excited to join this platform!"',
+        timestamp: DateTime.now(),
+        imageUrl: 'assets/images/c3.jpeg'),
+    Post(author: 'David Wilson',
+        content: '"Excited to join this platform!"',
+        timestamp: DateTime.now(),
+        imageUrl: 'assets/images/c5.jpeg'),
+    Post(author: 'Jessica Lee',
+        content: '"Excited to join this platform!"',
+        timestamp: DateTime.now(),
+        imageUrl: 'assets/images/c6.jpeg'),
+    Post(author: 'Ryan Miller',
+        content: '"Excited to join this platform!"',
+        timestamp: DateTime.now(),
+        imageUrl: 'assets/images/c7.jpeg'),
+    Post(author: 'Amanda Taylor',
+        content: '"Excited to join this platform!"',
+        timestamp: DateTime.now(),
+        imageUrl: 'assets/images/c8.jpeg'),
+    Post(author: 'William Martinez',
+        content: '"Excited to join this platform!"',
+        timestamp: DateTime.now(),
+        imageUrl: 'assets/images/c9.jpeg'),
 
 
   ];
@@ -31,7 +61,9 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final connectedAuthor = connectedCandidate?.name ?? '';
 
-    final connectedPosts = posts.where((post) => post.author == connectedAuthor).toList();
+    final connectedPosts = connectedAuthor.isNotEmpty
+        ? posts.where((post) => post.author == connectedAuthor).toList()
+        : [];
 
     return Scaffold(
       appBar: AppBar(
@@ -48,11 +80,19 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             Expanded(
-              child: ListView.builder(
+              child: connectedPosts.isEmpty
+                  ? Center(
+                child: Text(
+                  'No connected candidates',
+                  style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+                ),
+              )
+                  : ListView.builder(
                 itemCount: connectedPosts.length,
                 itemBuilder: (context, index) {
                   return Padding(
-                    padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+                    padding: EdgeInsets.symmetric(
+                        vertical: 8.0, horizontal: 16.0),
                     child: Card(
                       elevation: 4.0,
                       shape: RoundedRectangleBorder(
@@ -67,7 +107,8 @@ class HomeScreen extends StatelessWidget {
                               children: [
                                 CircleAvatar(
                                   radius: 20.0,
-                                  backgroundImage: AssetImage(connectedPosts[index].imageUrl),
+                                  backgroundImage: AssetImage(
+                                      connectedPosts[index].imageUrl),
                                 ),
                                 SizedBox(width: 8.0),
                                 Text(
@@ -113,7 +154,8 @@ class HomeScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => CandidatesScreen()),
+                        MaterialPageRoute(
+                            builder: (context) => CandidatesScreen()),
                       );
                     },
                     child: Text('Candidates'),
@@ -122,7 +164,8 @@ class HomeScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => CreatePostScreen()),
+                        MaterialPageRoute(
+                            builder: (context) => CreatePostScreen()),
                       );
                     },
                     child: Text('Create Post'),
@@ -131,12 +174,12 @@ class HomeScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => JobListingsScreen()),
+                        MaterialPageRoute(
+                            builder: (context) => JobListingsScreen()),
                       );
                     },
                     child: Text('Job Listing'),
                   ),
-
                 ],
               ),
             ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jobhunt/screens/home_screen.dart';
-import 'package:jobhunt/screens/login_page.dart'; // Import your LoginScreen here
+import 'package:jobhunt/screens/login_page.dart';
 import 'package:jobhunt/screens/candidates_screen.dart';
 import 'package:jobhunt/screens/candidate_detail_screen.dart';
 import 'package:jobhunt/screens/create_post_screen.dart';

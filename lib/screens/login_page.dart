@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:jobhunt/screens/home_screen.dart'; // Import your home screen here
+import 'package:jobhunt/screens/home_screen.dart';
 import 'package:jobhunt/screens/register_page.dart';
 
 class LoginPage extends StatelessWidget {
