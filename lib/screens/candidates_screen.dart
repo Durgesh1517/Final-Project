@@ -92,6 +92,7 @@ class _CandidatesScreenState extends State<CandidatesScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Candidates'),
+        backgroundColor: Colors.indigo,
       ),
       backgroundColor: Colors.blue[200],
       body: Column(

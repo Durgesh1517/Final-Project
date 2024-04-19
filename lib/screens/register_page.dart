@@ -6,7 +6,7 @@ class RegistrationPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Registration'),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.indigo,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

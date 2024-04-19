@@ -30,7 +30,7 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Create Post'),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.indigo,
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
@@ -133,8 +133,10 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
               child: Text(
                 'Create Post',
                 style: TextStyle(fontSize: 18.0),
+
               ),
             ),
+
             SizedBox(height: 24),
             Expanded(
               child: ListView.builder(

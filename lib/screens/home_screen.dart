@@ -68,6 +68,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Home'),
+        backgroundColor: Colors.indigo,
       ),
       body: Container(
         decoration: BoxDecoration(

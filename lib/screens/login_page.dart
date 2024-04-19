@@ -26,7 +26,7 @@ class LoginPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
-                  'assets/images/logo.jpg', // Replace 'assets/logo.png' with your actual logo image path
+                  'assets/images/logoformobile.jpg', // Replace 'assets/logo.png' with your actual logo image path
                   width: 200, // Adjust width as needed
                   height: 200, // Adjust height as needed
                 ),

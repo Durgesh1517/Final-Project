@@ -145,7 +145,7 @@ class JobListingsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Job Listings'),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.indigo,
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(16.0),

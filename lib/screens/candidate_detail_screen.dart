@@ -12,6 +12,7 @@ class CandidateDetailScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Candidate Detail'),
+        backgroundColor: Colors.indigo,
       ),
       body: SingleChildScrollView(
         child: Column(
